@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "SignUpViewController.h"
 
 static NSInteger kConstraintPriorityHigh = 999;
 static NSInteger kConstraintPriorityLow = 1;
@@ -38,6 +39,8 @@ static NSInteger kConstraintPriorityLow = 1;
 }
 
 - (IBAction)signUp:(id)sender {
+    SignUpViewController * signUpViewController = [[UIStoryboard storyboardWithName:@"SignUp" bundle:nil] instantiateViewControllerWithIdentifier:@"Account"];
+    [self presentViewController:signUpViewController animated:YES completion:nil];
 }
 
 #pragma mark UITextFieldDelegate

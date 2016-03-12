@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="height" constant="35" id="Iw4-Mn-ogn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="editingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="mMb-rr-Yxu"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="eWS-vV-SoO"/>
