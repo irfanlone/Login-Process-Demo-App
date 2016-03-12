@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
+#import "ForgotPasswordViewController.h"
 
 static NSInteger kConstraintPriorityHigh = 999;
 static NSInteger kConstraintPriorityLow = 1;
@@ -36,6 +37,8 @@ static NSInteger kConstraintPriorityLow = 1;
 }
 
 - (IBAction)forgotPasswordClicked:(id)sender {
+    ForgotPasswordViewController * forgotPasswordVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"forgotPassword"];
+    [self presentViewController:forgotPasswordVC animated:YES completion:nil];
 }
 
 - (IBAction)signUp:(id)sender {

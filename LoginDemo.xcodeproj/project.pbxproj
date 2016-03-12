@@ -17,6 +17,7 @@
 		178B72271C940D9A00B5947A /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B72261C940D9A00B5947A /* SignUpViewController.m */; };
 		178B722A1C94129D00B5947A /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B72291C94129D00B5947A /* LocationViewController.m */; };
 		178B722D1C9412B800B5947A /* SecurityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B722C1C9412B800B5947A /* SecurityViewController.m */; };
+		178B72311C9428B200B5947A /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B72301C9428B200B5947A /* ForgotPasswordViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		178B72291C94129D00B5947A /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		178B722B1C9412B800B5947A /* SecurityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityViewController.h; sourceTree = "<group>"; };
 		178B722C1C9412B800B5947A /* SecurityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityViewController.m; sourceTree = "<group>"; };
+		178B722F1C9428B200B5947A /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		178B72301C9428B200B5947A /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				178B720F1C93EFB300B5947A /* LoginViewController.h */,
 				178B72101C93EFB300B5947A /* LoginViewController.m */,
 				178B72121C93EFB300B5947A /* Main.storyboard */,
+				178B722F1C9428B200B5947A /* ForgotPasswordViewController.h */,
+				178B72301C9428B200B5947A /* ForgotPasswordViewController.m */,
 				178B72221C940AA200B5947A /* Sign-Up */,
 				178B72151C93EFB300B5947A /* Assets.xcassets */,
 				178B72171C93EFB300B5947A /* LaunchScreen.storyboard */,
@@ -181,6 +186,7 @@
 				178B72111C93EFB300B5947A /* LoginViewController.m in Sources */,
 				178B720E1C93EFB300B5947A /* AppDelegate.m in Sources */,
 				178B72271C940D9A00B5947A /* SignUpViewController.m in Sources */,
+				178B72311C9428B200B5947A /* ForgotPasswordViewController.m in Sources */,
 				178B720B1C93EFB300B5947A /* main.m in Sources */,
 				178B722A1C94129D00B5947A /* LocationViewController.m in Sources */,
 			);
