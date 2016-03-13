@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="35" id="KnS-TJ-ga0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="editingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="nxO-92-ZTi"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ug1-Zm-4kM"/>
@@ -96,8 +96,8 @@
                                     <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RdY-Dc-v2y"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="forrge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hf-gB-Gmr">
-                                <rect key="frame" x="223" y="180" width="154" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hf-gB-Gmr">
+                                <rect key="frame" x="173" y="180" width="254" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

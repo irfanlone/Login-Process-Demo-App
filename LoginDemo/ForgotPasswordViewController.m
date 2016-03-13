@@ -34,12 +34,17 @@
     if ([self.emailTextfield isFirstResponder]) {
         [self.emailTextfield resignFirstResponder];
     }
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Check your email" message:@"please check you email for all the instructions" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"Go back to Login" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }];
-    [alertController addAction:ok];
-    [self presentViewController:alertController animated:YES completion:nil];
+    // Newtwork request for forgot password
+    // on success
+    // Instead of creating a new screen for this, I am using the native UIAlertController.
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Check your email" message:@"please check you email for all the instructions" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"Go back to Login" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+        [alertController addAction:ok];
+        [self presentViewController:alertController animated:YES completion:nil];
+    // on failure.
+    // let the user know of the request failed.
 }
 
 #pragma mark UITextFieldDelegate

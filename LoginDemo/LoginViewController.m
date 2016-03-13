@@ -25,15 +25,30 @@ static NSInteger kConstraintPriorityLow = 1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(outsideTapped:)];
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:tapGestureRecognizer];
+
+}
+
+- (void)outsideTapped:(id)sender {
+    if ([self.emailTextField isFirstResponder]) {
+        [self.emailTextField resignFirstResponder];
+    } else if([self.passwordTextfield isFirstResponder])  {
+        [self.passwordTextfield resignFirstResponder];
+    }
+    self.topConstraint.priority = kConstraintPriorityLow;
 }
 
 - (IBAction)signIn:(id)sender {
-    
-    if ([self.emailTextField isFirstResponder]){
+    if ([self.emailTextField isFirstResponder]) {
         [self.emailTextField resignFirstResponder];
-    } else if ([self.passwordTextfield isFirstResponder]) {
+    } else if([self.passwordTextfield isFirstResponder])  {
         [self.passwordTextfield resignFirstResponder];
     }
+    self.topConstraint.priority = kConstraintPriorityLow;
+    // show progress indicator
+    // Send a Network request in the background for validating the user.
 }
 
 - (IBAction)forgotPasswordClicked:(id)sender {
@@ -49,8 +64,12 @@ static NSInteger kConstraintPriorityLow = 1;
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    self.topConstraint.priority = kConstraintPriorityLow;
+    if (textField == self.emailTextField) {
+        [self.passwordTextfield becomeFirstResponder];
+        
+    } else if (textField == self.passwordTextfield) {
+        [textField resignFirstResponder];
+    }
     return NO;
 }
 
@@ -66,10 +85,8 @@ static NSInteger kConstraintPriorityLow = 1;
 }
 
 - (IBAction)editingChanged:(id)sender {
+    // only enable the signIn button if there is value present in both fields.
     self.signInButton.enabled = (self.emailTextField.text.length > 0 && self.passwordTextfield.text.length > 0);
-    NSLog(@"%lu",self.passwordTextfield.text.length);
-    NSLog(@"%lu",self.emailTextField.text.length);
-
 }
 
 - (void)didReceiveMemoryWarning {

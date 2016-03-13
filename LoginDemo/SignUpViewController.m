@@ -10,6 +10,9 @@
 
 @interface SignUpViewController () <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *profilePhoto;
+@property (strong, nonatomic) IBOutlet UITextField *fullnameTextfield;
+@property (strong, nonatomic) IBOutlet UITextField *emailTextfield;
+@property (strong, nonatomic) IBOutlet UITextField *passwordTextfield;
 @end
 
 @implementation SignUpViewController
@@ -27,7 +30,11 @@
 }
 
 - (IBAction)nextPressed:(id)sender {
-    [self performSegueWithIdentifier:@"showLocation" sender:self];
+    // netwrok request for sign-up
+    // On success
+        [self performSegueWithIdentifier:@"showLocation" sender:self];
+    // else
+    // Alert the user for failure.
 }
 
 - (IBAction)backPressed:(id)sender {
@@ -64,7 +71,14 @@
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
+    if (textField == self.fullnameTextfield) {
+        [self.emailTextfield becomeFirstResponder];
+    } else if (textField == self.emailTextfield) {
+        [self.passwordTextfield becomeFirstResponder];
+    } else {
+        [textField resignFirstResponder];
+        [self nextPressed:nil];
+    }
     return NO;
 }
 

@@ -20,7 +20,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xU5-cV-IbS">
                                 <rect key="frame" x="10" y="332" width="560" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="mR4-31-Rgy" id="csH-Ey-c9v"/>
                                 </connections>
@@ -28,7 +28,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="it1-Vi-JMh">
                                 <rect key="frame" x="10" y="385" width="560" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="mR4-31-Rgy" id="LLs-q2-dxC"/>
                                 </connections>
@@ -60,7 +60,7 @@
                                     <constraint firstAttribute="height" constant="35" id="ejx-Nz-Afk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="mR4-31-Rgy" id="ck8-q3-Emv"/>
                                 </connections>
@@ -175,6 +175,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextfield" destination="xU5-cV-IbS" id="NeN-Wb-Ilr"/>
+                        <outlet property="fullnameTextfield" destination="rX7-Qq-FcR" id="Oic-yV-HAo"/>
+                        <outlet property="passwordTextfield" destination="it1-Vi-JMh" id="stn-EB-gQT"/>
                         <outlet property="profilePhoto" destination="CzD-ns-bN4" id="eVt-5L-pkL"/>
                         <segue destination="1Ro-tF-Md1" kind="show" identifier="showLocation" id="sQX-Wr-9ke"/>
                     </connections>
